@@ -1,0 +1,13 @@
+package net.huray.isenssdk.model
+
+enum class IsensError {
+    UNKNOWN_ERROR,
+    DEVICE_NOT_SUPPORTED,
+    DISCOVERY_SERVICE,
+    OPERATE_NOT_SUPPORTED,
+    AUTH_ERROR_WHILE_BONDED,
+    GATT_NULL,
+    BLUETOOTH_DEVICE_NULL,
+    CONNECT_FAIL,
+    INVALID_SOFTWARE_VERSION;
+}
