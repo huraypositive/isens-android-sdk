@@ -119,3 +119,23 @@ fun stopScan()
 ```kotlin
 fun disconnect()
 ```
+
+### 혈당 기록 model
+```kotlin
+data class IsensGlucoseRecord(
+    val sequenceNumber: Int, // 측정된 순서대로 부여되는 sequenceNumberr
+    val time: Long, // 혈당이 측정된 시각(millisecond)
+    val glucoseData: Double, // 혈당 측정값
+    val period: IsensRecordPeriod // 혈당 측정 시기
+)
+```
+
+#### 혈당 측정 시기 model
+```kotlin
+enum class IsensRecordPeriod(text: String) {
+    UNKNOWN("미입력"), // 혈당계에서 측정시기를 입력하지 않음
+    BEFORE_MEAL("식전"),
+    AFTER_MEAL("식후"),
+    FASTING("공복");
+}
+```
