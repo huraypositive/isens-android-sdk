@@ -130,7 +130,7 @@ data class IsensGlucoseRecord(
 )
 ```
 
-#### 혈당 측정 시기 model
+### 혈당 측정 시기 model
 ```kotlin
 enum class IsensRecordPeriod(text: String) {
     UNKNOWN("미입력"), // 혈당계에서 측정시기를 입력하지 않음
